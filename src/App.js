@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+import SideBar from './components/sideBar/sideBar';
+import HeroSection from './components/HeroSection/HeroSection';
+
+const  styled = {
+  headerStyled: {
+    overflow : "hidden"
+  },
+  heroStyled : {
+    padding : "32px"
+  }
+
+}
+
 
 function App() {
+  const [activeItem, setActiveItem] = useState(1);
+
+  const handleItemClick = (index) => {
+    setActiveItem(index);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='Parent-div'>
+        <SideBar activeItem={activeItem} handleItemClick={handleItemClick} />
+        <div style={styled.headerStyled}>
+          <Header />
+          <div style={styled.heroStyled} >
+            <HeroSection activeItem={activeItem} />
+          </div>
+
+        </div>
+      </div>
     </div>
   );
 }

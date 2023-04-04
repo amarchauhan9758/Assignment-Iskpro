@@ -1,0 +1,43 @@
+
+.navbar-list {
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    color: #FFFFFF;
+    line-height: 135.5%;
+    padding: 0; /* set padding to 0 */
+}
+
+.navbar-list li {
+    padding: 23px 48px;
+    list-style: none;
+    border-right: 2px solid white;
+    background: #000000;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    line-height: 135.5%;
+}
+
+
+.navbar-list :first-child{
+    border-radius: 32px 0px 0px 32px;
+    list-style: none;
+}
+.navbar-list :last-child{
+    border-radius: 0px 32px 32px 0px;
+    list-style: none;
+}
+
+
+
+.navbar-list li.active {
+    background: #707070;
+    list-style: none;
+}

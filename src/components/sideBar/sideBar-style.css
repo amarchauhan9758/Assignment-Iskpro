@@ -1,0 +1,107 @@
+.pareent-sidebar-div{
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+/* Style the  list item not-active*/
+.sideBar-list li {
+  background-color: black;
+}
+
+/* Style the  list item active*/
+.sideBar-list li.active {
+  background: #707070;
+}
+
+.sideBar-list {
+
+    width: 25%;
+    list-style: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+     color: #FFFFFF;
+
+}
+/* Style the 3rd to 5th child elements */
+.sideBar-list :nth-child(n+2):nth-child(-n+5) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 351px;
+    height: 77.17px;
+    text-align: center;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+  }
+
+
+
+
+  /* Style the first child element */
+  .sideBar-list :first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 351px;
+    height: 77.17px;
+    text-align: center;
+    border-radius: 20px 20px 0px 0px;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+
+  }
+
+  /* Style the last child element */
+  .sideBar-list :last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 351px;
+    height: 77.17px;
+    text-align: center;
+    border-radius: 0px 0px 20px 20px;
+    cursor: pointer;
+
+  }
+
+
+  /*   Content section css */
+
+  .content-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+
+  }
+  .content {
+    background: white;
+    width: 100%;
+    height: 100%;
+    display: none;
+    border-radius: 20px;
+    padding: 25px;
+    padding-bottom: 5rem;
+
+
+  }
+  .content h2 {
+    padding: 0px 0 5px 0px;
+  }
+
+  .active-content {
+    display: block;
+  }
+
+  .container-list{
+    display: flex;
+    justify-content: space-between;
+  }
+  .container-list :nth-child(3) :only-of-type {
+    color:red;
+  }
+
